@@ -8,7 +8,16 @@ import cherrypy
 class Queue(object):
     @cherrypy.expose
     def index(self):
-        return open('index.html')
+        return """<html>
+          <head></head>
+          <body>
+            <form method="get" action="queue">
+                <input type="text" value="User" name="name" />
+                <input type="text" value="Song" name="song" />
+              <button type="submit">Queue!</button>
+            </form>
+          </body>
+        </html>"""
 
 
 @cherrypy.expose

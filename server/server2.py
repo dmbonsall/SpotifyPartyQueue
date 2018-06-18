@@ -10,16 +10,7 @@ class SpotifyQueue(object):
     #opens html file for home page
     @cherrypy.expose
     def index(self):
-        return """<html>
-          <head></head>
-          <body>
-            <form method="get" action="queue">
-                <input type="text" value="User" name="name" />
-                <input type="text" value="Song" name="song" />
-              <button type="submit">Queue!</button>
-            </form>
-          </body>
-        </html>"""
+        return open('../www/app.html')
 
     #appends user and songURI to the queue
     @cherrypy.expose
